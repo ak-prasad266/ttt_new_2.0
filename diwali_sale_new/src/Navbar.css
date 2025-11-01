@@ -1,0 +1,46 @@
+.navbar {
+  background-color: #ff6600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  position: fixed;          /* makes navbar fixed */
+  top: 0;                   /* sticks it to top */
+  left: 0;
+  width: 100%;              /* full width */
+  z-index: 1000;
+}
+
+/* Prevent content hiding behind navbar */
+body {
+  padding-top: 60px; /* Adjust height equal to navbar height */
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 12px; /* reduced gap */
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px; /* slightly smaller text */
+}
+
+.flash {
+  animation: flash 1s infinite alternate;
+  color: #fff;
+}
+
+@keyframes flash {
+  from {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 1;
+  }
+}

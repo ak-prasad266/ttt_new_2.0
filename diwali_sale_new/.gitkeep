@@ -1,0 +1,5 @@
+cd diwali_sale_new
+echo > .gitkeep
+git add .gitkeep
+git commit -m "Keep diwali_sale_new folder tracked"
+git push origin main

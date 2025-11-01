@@ -1,0 +1,147 @@
+.home-container {
+  text-align: center;
+  padding-top: 100px; /* ✅ Add top space for fixed navbar */
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #ff9933, #ffcc66, #ff6600);
+  color: #fff;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Fireworks animation */
+.fireworks::before,
+.fireworks::after {
+  content: "🧨🎆 🎇 🧨 🎆 🎇 🧨";
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: fireworks 3s infinite linear;
+  font-size: 2rem;
+}
+
+@keyframes fireworks {
+  0% { top: 10%; opacity: 1; }
+  100% { top: -10%; opacity: 0; }
+}
+
+.flash {
+  animation: flash 1s infinite alternate;
+  font-size: 2rem;
+  color: #fff;
+  text-shadow: 2px 2px 10px #ff0;
+}
+
+@keyframes flash {
+  from { opacity: 0.6; }
+  to { opacity: 1; }
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin: 15px 0;
+}
+
+.categories {
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  background-color: #fff;
+  color: #ff6600;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:hover {
+  background-color: #ff6600;
+  color: white;
+  box-shadow: 0px 0px 10px #fff;
+}
+
+.diwali-img {
+  width: 300px;
+  height: 250px;
+  margin-top: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 20px #fff;
+}
+
+/* 🎇 Footer section */
+.footer {
+  margin-top: 40px;
+  padding: 20px 0;
+  font-size: 15px;
+  opacity: 0.95;
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border-top: 2px solid #fff; /* ✅ Horizontal line above footer */
+}
+.footer a {
+  color: #ffcc66;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* New lines of code */
+
+.fireworks-layer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60px;
+  pointer-events: none;
+  height: 120px;
+  overflow: visible;
+}
+
+.firecracker {
+  position: absolute;
+  font-size: 28px;
+  opacity: 0.9;
+}
+
+/* left to right animation */
+.left-to-right {
+  left: -60px;
+  top: 10%;
+  animation: ltr 4s linear infinite;
+}
+
+.left-to-right.delay { animation-delay: 1.5s; }
+
+@keyframes ltr {
+  0% { transform: translateX(0) translateY(0) rotate(0); }
+  50% { transform: translateX(80vw) translateY(-10px) rotate(10deg); }
+  100% { transform: translateX(160vw) translateY(-20px) rotate(20deg); opacity: 0; }
+}
+
+/* bottom to top animation */
+.bottom-to-top {
+  left: 20%;
+  bottom: -40px;
+  animation: btt 3.5s linear infinite;
+}
+
+@keyframes btt {
+  0% { transform: translateY(0) scale(1); opacity: 1; }
+  100% { transform: translateY(-220px) scale(1.05); opacity: 0; }
+}
+
+/* small visual helpers */
+.flash, .flash-title {
+  display: inline-block;
+  animation: flash 1s infinite alternate;
+}
+@keyframes flash {
+  from { opacity: 0.6; transform: scale(1); }
+  to { opacity: 1; transform: scale(1.02); }
+}
